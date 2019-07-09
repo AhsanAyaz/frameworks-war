@@ -1,0 +1,43 @@
+.vote-results {
+  &__go-back {
+    margin-bottom: 20px;
+  }
+  &__result-item {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid #eee;
+    background: #f6f6f6;
+    &__bg, &__content {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
+    &__content {
+      padding: 0 20px;
+      display: flex;
+      height: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      &__title {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &__img {
+          height: 26px;
+          width: 26px;
+          margin-right: 10px;
+          border-radius: 50%;
+          border: 1px solid white;
+          background: white;
+        }
+      }
+      &__count {
+        color: #333;
+      }
+    }
+  }
+}
