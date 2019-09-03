@@ -1,0 +1,25 @@
+<div class="vote-page" *ngIf="!voteInProgress else loader">
+  <div class="vote-page__heading">
+    Choose wisely!
+  </div>
+  <div class="vote-page__frameworks">
+    <div (click)="vote(framework)" class="vote-page__frameworks__framework" *ngFor="let framework of frameworks">
+      <img class="vote-page__frameworks__framework__img" [src]="framework.imageUrl">
+    </div>
+  </div>
+  <div *ngIf="voteCasted" class="vote-page__alert alert alert-success">
+    <div class="vote-page__alert__text">
+      Vote casted successfully!
+    </div>
+    <div (click)="voteCasted = false;" class="vote-page__alert__close">
+      x
+    </div>
+  </div>
+  <div routerLink="/votes/results" class="vote-page__see-results btn btn-primary">
+    See Results
+  </div>
+</div>
+
+<ng-template #loader>
+  <div class="loader"></div>
+</ng-template>

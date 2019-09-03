@@ -1,0 +1,26 @@
+<div class="vote-results">
+  <button routerLink="/votes" class="vote-results__go-back btn btn-dark">
+    < Go To Vote
+  </button>
+  <ng-container *ngIf="frameworks else loader">
+    <div class="vote-results__result-item" *ngFor="let framework of frameworks">
+      <div
+        class="vote-results__result-item__bg"
+        [style.backgroundColor]="framework.color"
+        style.width="{{((framework.votes / maxVotes) * 100)}}%">
+      </div>
+      <div class="vote-results__result-item__content">
+        <div class="vote-results__result-item__content__title">
+          <img class="vote-results__result-item__content__title__img" [src]="framework.imageUrl">
+          {{framework.title}}
+        </div>
+        <div class="vote-results__result-item__content__count">
+          {{framework.votes}}
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>
+<ng-template #loader>
+  <div class="loader"></div>
+</ng-template>

@@ -1,0 +1,41 @@
+.vote-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  &__alert {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__close {
+      cursor: pointer;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  &__heading {
+    font-size: 32px;
+    text-align: center;
+  }
+  &__frameworks {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &__framework {
+      cursor: pointer;
+      &__img {
+        width: 200px;
+        height: 200px;
+      }
+      &:hover & {
+        &__img {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+  &__see-results {
+    margin-top: 10px;
+  }
+}

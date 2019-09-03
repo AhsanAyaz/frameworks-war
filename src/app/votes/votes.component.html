@@ -1,0 +1,21 @@
+<div class="votes-page">
+  <div class="votes-page__header">
+    <a class="votes-page__header__title" routerLink="/votes">
+      Frameworks War
+    </a>
+    <ng-container *ngIf="user$ | async as user">
+      <div class="votes-page__header__profile">
+        <img class="votes-page__header__profile__img" [src]="user.photoURL">
+        <div class="votes-page__header__profile__name">
+          {{user.displayName}}
+        </div>
+      </div>
+      <button (click)="logOut()" class="votes-page__header__logout btn btn-dark">
+        Logout
+      </button>
+    </ng-container>
+  </div>
+  <div class="votes-page__container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <router-outlet></router-outlet> -->
+
+<ng-container *ngIf="stateAnalyzed else loader">
+  <router-outlet></router-outlet>
+</ng-container>
+
+<ng-template #loader>
+  <div class="loader">
+  </div>
+</ng-template>
