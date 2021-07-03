@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "fw-war"
+    }
+  },
+  "defaultProject": "fw-war",
+  "cli": {
+    "analytics": false
+  }
 }
